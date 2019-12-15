@@ -1,5 +1,35 @@
 {
   "pages": [
-    "pages/home/home"
-  ]
+    "pages/home/home",
+    "pages/history/history"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#fe7e77",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "TodoList",
+    "backgroundColor": "#fe7e77",
+    "enablePullDownRefresh": false
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "sitemapLocation": "sitemap24.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "今日",
+        "iconPath": "assets/tabbar/today1.png",
+        "selectedIconPath": "assets/tabbar/today.png"
+      },
+      {
+        "pagePath": "pages/history/history",
+        "text": "归档",
+        "iconPath": "assets/tabbar/history1.png",
+        "selectedIconPath": "assets/tabbar/history.png"
+      }
+    ],
+    "selectedColor": "#fe7e77"
+  }
 }

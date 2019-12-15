@@ -1,2 +1,17 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+
+<!-- 获取用户个人信息 -->
+
+<!-- 1. open-data -->
+<!-- <open-data type="userAvatarUrl"></open-data>
+<open-data type="userNickName"></open-data> -->
+
+<!-- 2. 使用button授权 -->
+<!-- <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+<view wx:else>请升级微信版本</view> -->
+
+<!-- 请求网络数据并展示 -->
+<view bindtap="click123123">123123</view>
+<view wx:for="{{list}}" wx:key="id">{{item.title}}</view>
+<view wx:for="{{list}}" wx:key="id">{{item.title}}</view>
+<view wx:for="{{list}}" wx:key="id">{{item.title}}</view>
