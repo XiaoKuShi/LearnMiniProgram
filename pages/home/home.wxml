@@ -1,2 +1,13 @@
-<!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<!-- 1.页面样式的写法 -->
+<!-- 1.1 行内（内联）样式 -->
+<view style="color: white; background: red; font-size:32px;">123</view>
+
+<!-- 页内样式 -->
+<view class="box">456</view>
+
+<!-- 全局样式 -->
+<view class="content">789</view>
+
+<!-- 2.三种页面样式的优先级 -->
+<!-- 如果三种样式同时作用于一个View -->
+<!-- 优先级 行内样式 > 页内样式 > 全局样式 -->

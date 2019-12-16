@@ -1,5 +1,8 @@
 {
   "pages": [
+    "pages/searchbar/searchbar",
+    "pages/wxss/wxss",
+    "pages/css/css",
     "pages/home/home"
   ]
 }
