@@ -1,0 +1,23 @@
+.container1 {
+  background: #9a9abe;
+  white-space: nowrap;
+}
+
+.item1 {
+  width: 100px;
+  height: 100px;
+  background: red;
+  margin: 5px;
+  display: inline-block;
+}
+
+.container2 {
+  background: orange;
+  height: 215px;
+}
+
+.item2 {
+  height: 100px;
+  background: blue;
+  margin: 5px;
+}

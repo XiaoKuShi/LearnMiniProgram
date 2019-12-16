@@ -1,0 +1,41 @@
+<!-- 1.image的基本使用 -->
+<!-- 
+  重点：
+  1.iamge组件可以写成单标签或双标签
+  2.image组件有默认的大小
+  3.是行内块级元素 - inline block
+
+ -->
+<!-- <image></image> -->
+<!-- <image/> -->
+
+<!-- 2.src: 本地图片/远程图片 -->
+<!-- 相对路径: 001.png -->
+<!-- 绝对路径: /pages/image/001.png -->
+<image src="001.png" />
+<image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg" />
+
+<!-- 3.相册中的图片 -->
+<button bindtap="handleChooseAlbum">打开相册</button>
+<image src="{{imageUrl}}" hidden="{{imageUrl === ''}}"/>
+
+<!-- 4.bindload 监听图片加载完成 -->
+<image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"
+       bindload="listenImageLoad1"/>
+
+<!-- 5.lazy-load 懒加载 -->
+<view>------------------------------</view>
+<image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"
+       bindload="listenImageLoad2"
+       lazy-load/>
+
+<!-- 6.show-menu-by-longpress 长按图片识别小程序码 -->
+<image src="002.png" show-menu-by-longpress/>
+
+<!-- 7. mode -->
+<image src="001.png" mode="scaleToFill" />
+<image src="001.png" mode="aspectFit" />
+<image src="001.png" mode="aspectFill" />
+<image src="001.png" mode="widthFix" />
+<image src="001.png" mode="top" />
+<image src="001.png" mode="bottom" />
