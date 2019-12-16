@@ -1,0 +1,25 @@
+<!-- 1.默认按钮 -->
+<button>默认按钮</button>
+
+<!-- 2.size: default / mini -->
+<button size="mini">size: mini</button>
+
+<!-- 3.type属性 -->
+<!-- primary: 绿色 -->
+<!-- default: 白色 -->
+<!-- warn: 红色 -->
+<button size="mini" type="primary">primary</button>
+<button size="mini" type="default">default</button>
+<button size="mini" type="warn">warn</button>
+
+<!-- 4.plain: 镂空效果，就是加边框 -->
+<button plain type="warn">加边框</button>
+
+<!-- 5.disable: 禁用 -->
+<button disabled>禁用</button>
+
+<!-- 6.loading: 菊花转 -->
+<button loading="{{isLoading}}" bindtap="closeLoading"> 加载中...</button>
+
+<!-- 7.hover-class: 点击效果 -->
+<button hover-class="pressed">点击样式</button>

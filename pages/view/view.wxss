@@ -1,0 +1,28 @@
+/* pages/view/view.wxss */
+
+.box1 {
+  width: 100px;
+  height: 100px;
+  background: purple;
+  color: white;
+  text-align: center;
+}
+
+.view1-hover {
+  background-color: red;
+  font-size: 20px;
+}
+
+.box2 {
+  width: 200px;
+  height: 200px;
+  background: #1e8342;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.view2-hover {
+  background-color: rgb(0, 255, 221);
+  font-size: 20px;
+}

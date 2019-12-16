@@ -1,5 +1,9 @@
 {
   "pages": [
+    "pages/view/view",
+    "pages/button/button",
+    "pages/text/text",
     "pages/home/home"
-  ]
+  ],
+  "sitemapLocation": "sitemap99.json"
 }

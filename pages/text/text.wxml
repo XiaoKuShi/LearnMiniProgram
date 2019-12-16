@@ -1,0 +1,19 @@
+<!-- 1.基本用法 -->
+<text>这是一条Text\n</text>
+
+<!-- 2.长按选中，默认不能选中 -->
+<!-- 小程序中很多属性，如果默认值是false，那么添加该属性，不用赋值，就代表是Yes -->
+<text selectable="{{true}}">这是一条可以选中的Text\n</text>
+<text selectable>这一条也可以选中，但是没有赋值\n</text>
+
+<!-- 3.space: 空格的大小 -->
+<!-- nbsp: 默认空格大小 -->
+<!-- ensp: 半个中文字符大小 -->
+<!-- emsp: 一个中文字符大小 -->
+<text>Hello world\n</text>
+<text space="nbsp">Hello world\n</text>
+<text space="ensp">Hello world\n</text>
+<text space="emsp">Hello world\n</text>
+
+<!-- 4.decode: 是否解码文本 -->
+<text decode> 5 &gt; 3</text>
