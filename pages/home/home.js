@@ -1,66 +1,42 @@
 // pages/home/home.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    message: "怎么了？",
+    firstname: "Mark",
+    lastname: "Gao",
+    age: 20,
+    isActive: false,
+    isShow: true,
+    score: 35,
+    time: new Date().toLocaleString()
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onLoad() {
+    setInterval(() => {
+      this.setData({
+        time: new Date().toLocaleString()
+      })
+    }, 1000)
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  changColor() {
+    this.setData({
+      isActive: !this.data.isActive
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  handleChangeShow() {
+    this.setData({
+      isShow: !this.data.isShow
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  handleChangeScore() {
+    var s = this.data.score
+    s += 10
+    s = s > 100 ? 45:s
+    this.setData({
+      score: s
+    })
   }
 })

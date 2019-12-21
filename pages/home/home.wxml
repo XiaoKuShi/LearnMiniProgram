@@ -1,2 +1,50 @@
-<!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<!-- WXML特征 -->
+<!-- 1. 类似HTM: 如可以写成单标签、双标签 -->
+<!-- 2. 必须有严格的闭合：没有闭合会导致编译错误 -->
+<!-- 3. 区分大小写：calss和Class是两个不同的额属性 -->
+
+<!-- Mustche 语法 -->
+<view>{{message}}</view>
+<view>{{firstname}} {{lastname}}</view>
+<view>{{firstname + ' ' + lastname}}</view>
+<view>{{age >= 18 ? '成年人' : '未成年人'}}</view>
+<view>{{time}}</view>
+
+<button size="mini" type="primary" bindtap="changColor">切换下面文本颜色</button>
+<view class="box {{isActive ? 'active' : ''}}">变变变</view>
+
+<!-- 条件判断 -->
+<!-- wx:if / wx:elif / wx:else -->
+<view> </view>
+<view> </view>
+<button size="mini" bindtap="handleChangeShow">是否隐藏</button>
+<view wx:if="{{isShow}}">我出现了！</view>
+
+<button size="mini" bindtap="handleChangeScore">Score</button>
+<view wx:if="{{score > 90}}">我考了{{score}}分，优秀</view>
+<view wx:elif="{{score > 80}}">我考了{{score}}分，良好</view>
+<view wx:elif="{{score > 70}}">我考了{{score}}分，一般</view>
+<view wx:elif="{{score > 60}}">我考了{{score}}分，及格</view>
+<view wx:else>我考了{{score}}分，不及格</view>
+
+<!-- hidden：组件是否隐藏 -->
+<!-- 1. hidden是所有组件默认都有的属性 -->
+<!-- 2. hidden为true时隐藏，为false时显示 -->
+<view hidden="{{true}}">hidden</view>
+
+<!-- wx:if 和 hidden 在隐藏组件时有什么区别 -->
+<view hidden="{{true}}">我是hidden隐藏的</view>
+<view wx:if="{{false}}">我是wx:if隐藏的</view>
+
+<!-- hidden 隐藏组件后，组件依然存在，只是display: none -->
+<!-- wx:if 隐藏的组件不存在 -->
+<!-- 如何选择hidden 和 wx:if -->
+<!-- 如果一个组件显示和隐藏的频率很高，用hidden，减少性能消耗 -->
+<!-- 如果一个只需要显示一次，用wx:if，减少内存占用 -->
+
+<view style="margin-top:20px;">-------------- 列表渲染 --------------</view>
+<!-- 1. wx:for的基本使用 -->
+<!-- 能遍历数组、字符串、数字 -->
+<view wx:for="{{['a','b','c']}}" wx:key="index">{{item}}</view>
+<view wx:for="mark" wx:key="index">{{item}}</view>
+<view wx:for="{{3}}" wx:key="index">{{item}}</view>

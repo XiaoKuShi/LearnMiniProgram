@@ -1,0 +1,44 @@
+<!-- 一、什么是block标签 -->
+<!-- 在某些情况下，我们使用wx:if, wx:for时可能需要包括一组组件标签。然后我们需要对这一组组件标签进行整体的操作 -->
+
+<!-- 需求：已知有三个组件view1,button1,text1, 通过isShow判断它们是否隐藏 -->
+<button size="mini" bindtap="handleShow" style="margin-top:20px">Show</button>
+
+<!-- 1.每个标签都做判断 -->
+<view style="margin-top:20px;">1.每个标签都做判断</view>
+<text hidden="{{!isShow}}">我是Text</text>
+<view hidden="{{!isShow}}">我是View</view>
+<button size="mini"  hidden="{{!isShow}}">我是Button</button>
+
+<!-- 2.在最外层套一个view,只判断这个view的隐藏 -->
+<view style="margin-top:20px;">2.在最外层套一个view,只判断这个view的隐藏</view>
+<view hidden="{{!isShow}}">
+  <text>我是Text</text>
+  <view>我是View</view>
+  <button size="mini">我是Button</button>
+</view>
+
+<!-- 3.使用block -->
+<view style="margin-top:20px;">3.使用block</view>
+<block wx:if="{{isShow}}">
+  <text>我是Text</text>
+  <view>我是View</view>
+  <button size="mini">我是Button</button>
+</block>
+
+<!-- 二、block标签的意义 -->
+<!-- 1.<block/>并不是一个组件，它仅仅是一个包装元素，不会在页面中做任何渲染，只接受控制属性 -->
+
+<!-- 三、使用block的好处 -->
+<!-- 1.将需要进行遍历或者判断的内容进行包裹 -->
+<!-- 2.将遍历和判断的属性放在block标签中，不影响普通属性的阅读，提高代码的可读性 -->
+<!-- 3.bolck标签不会被渲染，可以提高性能 -->
+
+<!-- 四、item, index 重命名，用于多重数组 -->
+<view wx:for="{{movies}}" wx:for-item="movie" wx:for-index="i" wx:key="i">{{movie}} {{i}}</view>
+
+<block wx:for="{{nums}}" wx:for-item="numArr" wx:key="index">
+  <block  wx:for="{{numArr}}" wx:for-item="num" wx:key="index">
+      <view>{{num}}</view>
+  </block>
+</block>

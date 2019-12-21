@@ -1,5 +1,8 @@
 {
   "pages": [
+    "pages/template/template",
+    "pages/block/block",
     "pages/home/home"
-  ]
+  ],
+  "sitemapLocation": "sitemap30.json"
 }

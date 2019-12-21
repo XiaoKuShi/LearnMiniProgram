@@ -1,0 +1,48 @@
+<!-- 1.template 的作用 -->
+<!-- 
+为了代码的复用
+template 在小程序发展初期的时候用的比较多，因为当时不支持自动以组件
+ -->
+
+ <!-- 2.template 的用法 -->
+ <!-- 
+  ①定义一个模板，设置name属性
+  <template name="tep1"></template> 
+  template包裹的内容在没有使用的时候是不会渲染的
+  ②使用模板，设置is属性，is=name
+  ③传值：通过marktach语法，设置data属性
+  -->
+
+  <template name="myTmp1">
+    <button size="mini">{{key1}}</button>
+    <view>{{key2}}</view>
+  </template>
+
+  <template is="myTmp1" data="{{key1: 'aaa', key2: 'bbb'}}"></template>
+
+  <!-- 3.import include 从外部导入模板 -->
+  
+<import src="/aaa.wxml"/>
+<template is="aaatmplate"></template>
+
+<!-- 注意
+import 导入的方式不能实现循环导入(递归导入)
+即 在b文件中导入c文件，在a文件中导入b文件啊，此时a文件中不能使用c文件的内容
+ -->
+
+<!-- include 导入是把<template/> 和 <wxs/> 标签之外的所有代码拷贝到 <include/> 的位置-->
+<!-- 注意：include是可以循环引入的 -->
+<include src="/header.wxml"/>
+
+
+<!-- 总结
+关于wxml的两种导入方式：
+  import 导入：
+    1.主要是导入template
+    2.特点：不能进行递归导入
+  include引入:
+    1.将公共的wxml中的组件抽取到一个文件中
+    2.特点不能引入 template、wxs, 可以进行递归引入
+
+
+ -->

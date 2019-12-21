@@ -1,0 +1,6 @@
+<view>---------------</view>
+<view>我是导航栏</view>
+<view>我是导航栏下面的标题</view>
+<view>---------------</view>
+
+<include src="/sub.wxml"/>
