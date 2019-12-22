@@ -1,0 +1,35 @@
+<!-- WXS(WeiXin Script) 是小程序的一套脚本语言，结合WXML可以构建出页面的结构 -->
+<!-- WXS 与 JavaScript 是不同的语言,有自己的语法,并不和JavaScript一致（基本一致） -->
+
+<!-- 2. 为什么要设计WXS语言呢 -->
+<!-- 在WXML中式不能直接调用page/component中定义的函数的 -->
+<!-- 但是在某些情况，我们希望使用函数来处理WXML中的数据(类似Vue中的过滤器)，这个时候就要使用WXS -->
+
+<!-- 3. WXS使用的限制和特点 -->
+<!-- WXS的运行环境和其他JavaScript代码是隔离的，WXS不能调用其他JavaScript件中定义的函数，也不能调用小程序提供的api -->
+<!-- WXS函数不能作为组件的时间回调 -->
+<!-- 由于运行环境的差异，在iOS设备上小程序的WXS会比JavaScript代码快2~20倍，在Android设备上无明显差异 -->
+
+<!-- 4.WXS的定义方式 -->
+<!-- <wxs module='m1'>
+  var name = "Mark Gao";
+
+  function sum(num1, num2) {
+    return num1 + num2
+  }
+
+  module.exports = {
+    name: name,
+    sum: sum
+  }
+
+</wxs> -->
+
+<!-- 5.从外部导入一个wxs文件，注意：不能使用绝对路径 -->
+<wxs src='aaa.wxs' module='m1'/>
+
+<view>{{m1.name}}</view>
+<view>{{m1.sum(3,5)}}</view>
+
+<!-- 6. wxs的应用 -->
+<view>{{m1.floatFormat(price)}}</view>

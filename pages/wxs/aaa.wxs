@@ -1,0 +1,16 @@
+var name = "Mark Gao";
+
+function sum(num1, num2) {
+  return num1 + num2
+}
+
+function floatFormat(num, a) {
+  var b = a || 2;
+  return num.toFixed(b)
+}
+
+module.exports = {
+  name: name,
+  sum: sum,
+  floatFormat: floatFormat
+}
