@@ -5,62 +5,49 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    titles: ["衣服","帽子","鞋子"]
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  aaaClick() {
+    console.log('点击了');
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  handleTouchStart() {
+    console.log('handleTouchStart');
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  handleTouchEnd() {
+    console.log('handleTouchEnd');
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  handleTap() {
+    console.log('handleTap');
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  handleTouchCancel() {
+    console.log('handleTouchCancel');
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+  handleTouchMove() {
+    console.log('handleTouchMove');
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
+  handleTouchLongTap() {
+    console.log('handleTouchLongTap');
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  handleItemClick(event) {
+    console.log(event);
+  },
+  capture1() {
+    console.log("capture1");
+  },
+  capture2() {
+    console.log("capture2");
+  },
+  capture3() {
+    console.log("capture3");
+  },
+  tap1() {
+    console.log("tap1");
+  },
+  tap2() {
+    console.log("tap2");
+  },
+  tap3() {
+    console.log("tap3");
   }
 })

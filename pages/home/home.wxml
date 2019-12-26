@@ -1,2 +1,54 @@
-<!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<!-- 1.事件绑定 -->
+
+<button size="mini" bindtap="aaaClick">  A  </button>
+<button size="mini" bind:tap="aaaClick">  B  </button>
+<button size="mini" catch:tap="aaaClick">  C  </button>
+
+<!-- 2.常见的事件类型 -->
+<!-- touchstart 手指触摸动作开始 -->
+<!-- touchmove 手指触摸后移动 -->
+<!-- touchcancel 手指触摸动作被打断，如来电，弹窗 -->
+<!-- touchend 手指触摸动作结束 -->
+<!-- tap 手指触摸后马上离开，单点 -->
+<!-- longpress 手指触摸后超过350ms再离开,如果指定了事件回调函数并触发了这个事件，tap事件将不再触发 -->
+<!-- longtap 手指触摸后超过350ms再离开(推荐使用longpress) -->
+
+<view class="box" 
+      bindtouchstart="handleTouchStart"
+      bindtouchend="handleTouchEnd"
+      bindtap="handleTap"
+      bindtouchcancel="handleTouchCancel"
+      bindtouchmove="handleTouchMove"
+      bindlongtap="handleTouchLongTap"></view>
+
+<!-- 3.时间对象的分析 -->
+<!-- touchs 和 changeTouchs 的区别：
+  touchs 是当前事件的集合，changeTouchs是变化事件的集合
+ -->
+ <!-- target 和 currentTarget 的区别：
+  target 是产生事件的组件，currentTarget是触发事件的组件
+  -->
+
+<!-- 4.事件的传递 -->
+<view class="container">
+  <block wx:for="{{titles}}" wx:key="index">
+    <view class="item" 
+          bindtap="handleItemClick"
+          data-index="{{index}}"
+          data-item="{{item}}">
+        
+      {{item}}
+    </view>
+  </block>
+</view>
+
+<!-- 5.事件捕获和事件冒泡 -->
+<view class="view1" capture-bind:tap="capture1" bindtap="tap1">
+  view1
+  <view class="view2" capture-bind:tap="capture2" bindtap="tap2">
+    view2
+    <view class="view3" capture-bind:tap="capture3" bindtap="tap3">
+      view3
+    </view>
+  </view>
+</view>
