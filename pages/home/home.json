@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "homeCell": "/components/homeCell/homeCell",
+    "my-style": "/components/my-style/my-style"
+  }
 }
