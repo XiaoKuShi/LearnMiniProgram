@@ -1,2 +1,46 @@
-<!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<!-- 组件与页面见传值 -->
+<!-- 1.页面传值给组件 -->
+<my-prop title="上海" content="上海市" titleclass='titleclass1'/>
+<my-prop title="河南" content="郑州市" titleclass='titleclass2'/>
+<my-prop titleclass='titleclass3'/>
+
+<!-- 2.组件内部发出事件 -->
+<view>当前计数：{{counter}}</view>
+<my-event bind:aaa='handleIncrement'/>
+
+<!-- 3.外部调用组件内部事件 -->
+<my-sel id='select-id'/>
+<button size="mini" bind:tap="handleSelIncrement"> +1 </button>
+
+<!-- 4.tab-control的练习 -->
+<my-tab-control titles = "{{['流行', '新款', '精选', '全部']}}" 
+                bind:itemclick="handleTabClick"/>
+
+<!-- 5.插槽slot -->
+<view>-----------------------</view>
+<my-slot>
+  <button size="mini">slot</button>
+</my-slot>
+<view>-----------------------</view>
+<my-slot>
+  <text>纯文本</text>
+</my-slot>
+<view>-----------------------</view>
+<my-slot>
+  <image src="https://dev.hinounou.vip/public/assets/img/avatar.jpg"></image>
+</my-slot>
+<view>-----------------------</view>
+<my-slot>
+  <slider value="50"></slider>
+</my-slot>
+
+<!-- 6.多个插槽slot -->
+<!-- 注意:
+        1.给每一个插槽设置一个name属性
+        2.必须在Component对象中添加一个选项: options -> mutilpleSlots: true
+ -->
+<my-slot-m>
+  <button size="mini" slot="slot2">按钮</button>
+  <slider slot="slot1"></slider>
+  <view slot="slot3">这是第三个</view>
+</my-slot-m>

@@ -1,0 +1,1 @@
+<view>组件内部计数: {{counter}}</view>

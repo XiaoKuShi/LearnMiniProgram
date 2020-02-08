@@ -1,1 +1,13 @@
 /* pages/home/home.wxss */
+
+.titleclass1 {
+  color: red
+}
+
+.titleclass2 {
+  color: orange
+}
+
+.titleclass3 {
+  color: blue
+}
