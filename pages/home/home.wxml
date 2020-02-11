@@ -1,2 +1,7 @@
-<!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<button class="button" bind:tap="handleShowToast1">Toast: Success</button>
+<button class="button" bind:tap="handleShowToast2">Toast: Loading</button>
+<button class="button" bind:tap="handleShowToast3">Toast: No icon</button>
+<button class="button" bind:tap="handleShowModal1">Modal</button>
+<button class="button" bind:tap="handleShowLoading1">Loading</button>
+<button class="button" bind:tap="handleShowAction1">ActionSheet</button>
+<button class="button" open-type="share">Share</button>
