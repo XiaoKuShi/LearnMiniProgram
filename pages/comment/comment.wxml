@@ -1,0 +1,4 @@
+<text>Comment界面</text>
+
+<!-- 返回到指定界面 -->
+<navigator open-type="navigateBack" delta="2">返回首页</navigator>

@@ -1,0 +1,5 @@
+<text>Shop界面</text>
+<view>姓名: {{name}}</view>
+<view>年龄: {{age}}</view>
+
+<!-- 1. -->

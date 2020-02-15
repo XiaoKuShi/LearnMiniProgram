@@ -1,0 +1,10 @@
+<text>Detail界面</text>
+
+<!-- 1. 返回 -->
+<navigator open-type="navigateBack">返回上个界面</navigator>
+
+<!-- 2. 跳转到评论界面 -->
+<navigator url="/pages/comment/comment">跳转到评论界面</navigator>
+
+<!-- 3. 代码返回界面 -->
+<button size="mini" bind:tap="handlePushBack">代码返回：bavigateBack</button>

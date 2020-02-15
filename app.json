@@ -1,5 +1,22 @@
 {
   "pages": [
-    "pages/home/home"
-  ]
+    "pages/home/home",
+    "pages/about/about",
+    "pages/detail/detail",
+    "pages/comment/comment",
+    "pages/shop/shop"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "Home"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "About"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap90.json"
 }

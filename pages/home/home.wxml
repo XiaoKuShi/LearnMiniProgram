@@ -1,2 +1,38 @@
-<!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<text>Home界面</text>
+
+<!-- 1.navigator 页面跳转 -->
+<!-- 跳转到下一界面后，此界面让然存在 -->
+<navigator url="/pages/detail/detail">跳转到Detail界面</navigator>
+
+<!-- 2.navigator open-type: redirect -->
+<!-- 重定向，关闭此界面，同时打开下一界面 -->
+<navigator url="/pages/detail/detail"
+           open-type="redirect">
+  跳转到Detail界面: redirect
+</navigator>
+
+<!-- 3.navigator open-type: switch -->
+<!-- 手动切换tabbar -->
+<navigator url="/pages/about/about"
+           open-type="switchTab">
+  跳转到About界面: switchTab
+</navigator>
+
+<!-- 4.navigator open-type: reLaunch -->
+<!-- 关闭所有界面，同时打开一个新的界面 -->
+<navigator url="/pages/detail/detail"
+           open-type="reLaunch">
+  跳转到Detail界面: reLaunch
+</navigator>
+
+<!-- 5.navigator 页面跳转并传值 -->
+<!-- 跳转到下一界面后，此界面让然存在 -->
+<navigator url="/pages/shop/shop?name=Mark&age=18">跳转到Shop界面: 传值</navigator>
+
+<!-- 6.界面返回传值 -->
+<view>title: {{title}}</view>
+
+<view> ------------ </view>
+
+<!-- 7.通过代码进行界面跳转 -->
+<button size="mini" bind:tap="handlePushClick">代码跳转：navittageTo</button>
